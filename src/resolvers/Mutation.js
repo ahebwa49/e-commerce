@@ -75,7 +75,7 @@ const Mutations = {
       password,
       permissions: { set: ["ADMIN"] }
     });
-    const token = await jwt.sign({ userId: user.id }, process.env.APP_SECRET);
+    const token = jwt.sign({ userId: user.id }, process.env.APP_SECRET);
 
     //set the cookie
     context.response.cookie("token", token, {
