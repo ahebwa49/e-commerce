@@ -3,7 +3,11 @@ module.exports = {
   // Please don't change this file manually but run `prisma generate` to update it.
   // For more information, please read the docs: https://www.prisma.io/docs/prisma-client/
 
-/* GraphQL */ `type AggregateCartItem {
+/* GraphQL */ `type AggregateBlogPost {
+  count: Int!
+}
+
+type AggregateCartItem {
   count: Int!
 }
 
@@ -25,6 +29,169 @@ type AggregateUser {
 
 type BatchPayload {
   count: Long!
+}
+
+type BlogPost {
+  id: ID!
+  title: String!
+  proTipOne: String!
+  proTipTwo: String!
+  description: String!
+}
+
+type BlogPostConnection {
+  pageInfo: PageInfo!
+  edges: [BlogPostEdge]!
+  aggregate: AggregateBlogPost!
+}
+
+input BlogPostCreateInput {
+  title: String!
+  proTipOne: String!
+  proTipTwo: String!
+  description: String!
+}
+
+type BlogPostEdge {
+  node: BlogPost!
+  cursor: String!
+}
+
+enum BlogPostOrderByInput {
+  id_ASC
+  id_DESC
+  title_ASC
+  title_DESC
+  proTipOne_ASC
+  proTipOne_DESC
+  proTipTwo_ASC
+  proTipTwo_DESC
+  description_ASC
+  description_DESC
+  createdAt_ASC
+  createdAt_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+}
+
+type BlogPostPreviousValues {
+  id: ID!
+  title: String!
+  proTipOne: String!
+  proTipTwo: String!
+  description: String!
+}
+
+type BlogPostSubscriptionPayload {
+  mutation: MutationType!
+  node: BlogPost
+  updatedFields: [String!]
+  previousValues: BlogPostPreviousValues
+}
+
+input BlogPostSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: BlogPostWhereInput
+  AND: [BlogPostSubscriptionWhereInput!]
+  OR: [BlogPostSubscriptionWhereInput!]
+  NOT: [BlogPostSubscriptionWhereInput!]
+}
+
+input BlogPostUpdateInput {
+  title: String
+  proTipOne: String
+  proTipTwo: String
+  description: String
+}
+
+input BlogPostUpdateManyMutationInput {
+  title: String
+  proTipOne: String
+  proTipTwo: String
+  description: String
+}
+
+input BlogPostWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  title: String
+  title_not: String
+  title_in: [String!]
+  title_not_in: [String!]
+  title_lt: String
+  title_lte: String
+  title_gt: String
+  title_gte: String
+  title_contains: String
+  title_not_contains: String
+  title_starts_with: String
+  title_not_starts_with: String
+  title_ends_with: String
+  title_not_ends_with: String
+  proTipOne: String
+  proTipOne_not: String
+  proTipOne_in: [String!]
+  proTipOne_not_in: [String!]
+  proTipOne_lt: String
+  proTipOne_lte: String
+  proTipOne_gt: String
+  proTipOne_gte: String
+  proTipOne_contains: String
+  proTipOne_not_contains: String
+  proTipOne_starts_with: String
+  proTipOne_not_starts_with: String
+  proTipOne_ends_with: String
+  proTipOne_not_ends_with: String
+  proTipTwo: String
+  proTipTwo_not: String
+  proTipTwo_in: [String!]
+  proTipTwo_not_in: [String!]
+  proTipTwo_lt: String
+  proTipTwo_lte: String
+  proTipTwo_gt: String
+  proTipTwo_gte: String
+  proTipTwo_contains: String
+  proTipTwo_not_contains: String
+  proTipTwo_starts_with: String
+  proTipTwo_not_starts_with: String
+  proTipTwo_ends_with: String
+  proTipTwo_not_ends_with: String
+  description: String
+  description_not: String
+  description_in: [String!]
+  description_not_in: [String!]
+  description_lt: String
+  description_lte: String
+  description_gt: String
+  description_gte: String
+  description_contains: String
+  description_not_contains: String
+  description_starts_with: String
+  description_not_starts_with: String
+  description_ends_with: String
+  description_not_ends_with: String
+  AND: [BlogPostWhereInput!]
+  OR: [BlogPostWhereInput!]
+  NOT: [BlogPostWhereInput!]
+}
+
+input BlogPostWhereUniqueInput {
+  id: ID
 }
 
 type CartItem {
@@ -419,6 +586,12 @@ input ItemWhereUniqueInput {
 scalar Long
 
 type Mutation {
+  createBlogPost(data: BlogPostCreateInput!): BlogPost!
+  updateBlogPost(data: BlogPostUpdateInput!, where: BlogPostWhereUniqueInput!): BlogPost
+  updateManyBlogPosts(data: BlogPostUpdateManyMutationInput!, where: BlogPostWhereInput): BatchPayload!
+  upsertBlogPost(where: BlogPostWhereUniqueInput!, create: BlogPostCreateInput!, update: BlogPostUpdateInput!): BlogPost!
+  deleteBlogPost(where: BlogPostWhereUniqueInput!): BlogPost
+  deleteManyBlogPosts(where: BlogPostWhereInput): BatchPayload!
   createCartItem(data: CartItemCreateInput!): CartItem!
   updateCartItem(data: CartItemUpdateInput!, where: CartItemWhereUniqueInput!): CartItem
   updateManyCartItems(data: CartItemUpdateManyMutationInput!, where: CartItemWhereInput): BatchPayload!
@@ -964,6 +1137,9 @@ enum Permission {
 }
 
 type Query {
+  blogPost(where: BlogPostWhereUniqueInput!): BlogPost
+  blogPosts(where: BlogPostWhereInput, orderBy: BlogPostOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [BlogPost]!
+  blogPostsConnection(where: BlogPostWhereInput, orderBy: BlogPostOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): BlogPostConnection!
   cartItem(where: CartItemWhereUniqueInput!): CartItem
   cartItems(where: CartItemWhereInput, orderBy: CartItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [CartItem]!
   cartItemsConnection(where: CartItemWhereInput, orderBy: CartItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): CartItemConnection!
@@ -983,6 +1159,7 @@ type Query {
 }
 
 type Subscription {
+  blogPost(where: BlogPostSubscriptionWhereInput): BlogPostSubscriptionPayload
   cartItem(where: CartItemSubscriptionWhereInput): CartItemSubscriptionPayload
   item(where: ItemSubscriptionWhereInput): ItemSubscriptionPayload
   order(where: OrderSubscriptionWhereInput): OrderSubscriptionPayload

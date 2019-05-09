@@ -1,6 +1,16 @@
 const { hasPermission } = require("../utils");
 
 const Query = {
+  async blogPosts(root, args, context, info) {
+    const blogPosts = await context.prisma.blogPosts();
+    return blogPosts;
+  },
+  async blogPost(root, args, context, info) {
+    const blogPost = await context.prisma.blogPost({
+      id: args.id
+    });
+    return blogPost;
+  },
   async users(root, args, context, info) {
     //1. check if they are logged in.
     if (!context.request.userId) {
