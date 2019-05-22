@@ -42,7 +42,7 @@ const Nav = () => (
           </>
         )}
         {!profile && (
-          <Link href="/signup">
+          <Link href="/signin">
             <a>Sign In</a>
           </Link>
         )}

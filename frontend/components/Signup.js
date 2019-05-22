@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Mutation } from "react-apollo";
+import Link from "next/link";
 import gql from "graphql-tag";
 import Form from "./styles/Form";
 import Error from "./ErrorMessage";
@@ -79,6 +80,7 @@ class Signup extends Component {
                   />
                 </label>
                 <button type="submit">Sign Up!</button>
+                <h2>Have an account already? login <Link href="/signin"><a>here</a></Link></h2>
               </fieldset>
             </Form>
           );

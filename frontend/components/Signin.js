@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { Mutation } from "react-apollo";
+import Link from "next/link";
 import gql from "graphql-tag";
 import Form from "./styles/Form";
 import Error from "./ErrorMessage";
 import { CURRENT_USER_QUERY } from "./User";
+import RequestReset from "./RequestReset";
 
 const SIGNIN_MUTATION = gql`
   mutation SIGNIN_MUTATION($email: String!, $password: String!) {
@@ -18,7 +20,8 @@ const SIGNIN_MUTATION = gql`
 class Signin extends Component {
   state = {
     email: "",
-    password: ""
+    password: "",
+    requestReset: false
   };
   saveToState = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -64,6 +67,12 @@ class Signin extends Component {
                   />
                 </label>
                 <button type="submit">Sign in!</button>
+                <h3>
+                  Create an{" "}
+                  <Link href="/signup">
+                    <a>account</a>
+                  </Link>
+                </h3>
               </fieldset>
             </Form>
           );

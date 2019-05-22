@@ -10,13 +10,16 @@ const Columns = styled.div`
   grid-gap: 20px;
 `;
 
-const SignupPage = props => {
-  return (
-    <Columns>
-      <Signup />
-      <Signin />
-      <RequestReset />
-    </Columns>
-  );
-};
+class SignupPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      login: false
+    };
+  }
+  render() {
+    const { login } = this.state;
+    return <Columns>{login ? <Signin /> : <Signup />}</Columns>;
+  }
+}
 export default SignupPage;
