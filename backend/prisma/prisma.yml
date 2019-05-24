@@ -1,5 +1,6 @@
 #endpoint: ${env:PRISMA_ENDPOINT}
-endpoint: https://ston-fits-d4831d995d.herokuapp.com/ston-fits-prod/prod
+#endpoint: https://ston-fits-d4831d995d.herokuapp.com/ston-fits-prod/prod
+endpoint: http://localhost:4466
 datamodel: datamodel.prisma
 secret: ${env:PRISMA_SECRET}
 
