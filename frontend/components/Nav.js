@@ -22,14 +22,11 @@ const Nav = () => (
             <Link href="/orders">
               <a>Orders</a>
             </Link>
-            <Link href="/me">
-              <a>Account</a>
-            </Link>
             <Signout />
             <Mutation mutation={TOGGLE_CART_MUTATION}>
               {toggleCart => (
                 <button onClick={toggleCart}>
-                  My Cart
+                  Cart
                   <CartCount
                     count={profile.cart.reduce(
                       (tally, cartItem) => tally + cartItem.quantity,

@@ -26,8 +26,13 @@ const Center = styled.div`
 const ItemsList = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 60px;
+  justify-items: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  grid-gap: 2% 4%;
   max-width: ${props => props.theme.maxWidth};
+  width: 100%;
   margin: 0 auto;
 `;
 
