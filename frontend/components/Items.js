@@ -33,7 +33,7 @@ const ItemsList = styled.div`
   grid-gap: 2% 4%;
   max-width: ${props => props.theme.maxWidth};
   width: 100%;
-  margin: 0 auto;
+  margin: auto auto;
 `;
 
 class Items extends Component {
@@ -62,6 +62,7 @@ class Items extends Component {
             );
           }}
         </Query>
+        <br />
         <Pagination page={this.props.page} />
       </Center>
     );

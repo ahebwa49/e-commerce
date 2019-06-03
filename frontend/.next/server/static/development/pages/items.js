@@ -573,7 +573,7 @@ var Center = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withCo
 var ItemsList = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
   displayName: "Items__ItemsList",
   componentId: "tikday-1"
-})(["display:grid;grid-template-columns:1fr 1fr;justify-items:center;align-items:center;justify-self:center;align-self:center;grid-gap:2% 4%;max-width:", ";width:100%;margin:0 auto;"], function (props) {
+})(["display:grid;grid-template-columns:1fr 1fr;justify-items:center;align-items:center;justify-self:center;align-self:center;grid-gap:2% 4%;max-width:", ";width:100%;margin:auto auto;"], function (props) {
   return props.theme.maxWidth;
 });
 
@@ -656,11 +656,17 @@ function (_Component) {
             __self: this
           });
         }));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65
+        },
+        __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pagination__WEBPACK_IMPORTED_MODULE_5__["default"], {
         page: this.props.page,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 66
         },
         __self: this
       }));
