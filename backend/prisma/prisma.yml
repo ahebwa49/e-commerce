@@ -1,4 +1,3 @@
-#endpoint: http://localhost:4466/sick-fits/dev
 endpoint: https://ston-fits-d4831d995d.herokuapp.com/ston-fits-prod/prod
 datamodel: datamodel.prisma
 secret: ${env:PRISMA_SECRET}
@@ -12,4 +11,3 @@ generate:
 hooks:
   post-deploy:
     - prisma generate
-
