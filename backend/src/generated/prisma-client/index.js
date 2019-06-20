@@ -36,7 +36,6 @@ var models = [
 exports.Prisma = prisma_lib_1.makePrismaClientClass({
   typeDefs,
   models,
-  endpoint: `http://localhost:4466/sick-fits/dev`,
-  secret: `${process.env["PRISMA_SECRET"]}`
+  endpoint: `https://ston-fits-d4831d995d.herokuapp.com/stonfits-prod/prod`
 });
 exports.prisma = new exports.Prisma();
