@@ -27,15 +27,11 @@ var models = [
   {
     name: "Order",
     embedded: false
-  },
-  {
-    name: "BlogPost",
-    embedded: false
   }
 ];
 exports.Prisma = prisma_lib_1.makePrismaClientClass({
   typeDefs,
   models,
-  endpoint: `https://ston-fits-d4831d995d.herokuapp.com/stonfits-prod/prod`
+  endpoint: `${process.env["PRISMA_ENDPOINT"]}`
 });
 exports.prisma = new exports.Prisma();

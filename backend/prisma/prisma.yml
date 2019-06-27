@@ -1,6 +1,7 @@
-endpoint: ${env:PRISMA_ENDPOINT}
+#endpoint: ${env:PRISMA_ENDPOINT}
+endpoint: https://stonfits-production-63d3839149.herokuapp.com/stonfits-prod/prod
 datamodel: datamodel.prisma
-#secret: ${env:PRISMA_MANAGEMENT_API_SECRET}
+#secret: ${env:PRISMA_SECRET}
 
 generate:
   - generator: javascript-client
