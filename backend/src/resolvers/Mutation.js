@@ -7,14 +7,14 @@ const { hasPermission } = require("../utils");
 const stripe = require("../stripe");
 
 const Mutations = {
-  createBlogPost(root, args, context, info) {
+  /*createBlogPost(root, args, context, info) {
     return context.prisma.createBlogPost({
       title: args.title,
       proTipOne: args.proTipOne,
       proTipTwo: args.proTipTwo,
       description: args.description
     });
-  },
+  },*/
   async createUser(root, args, context, info) {
     const user = await context.prisma.createUser({
       data: {
