@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import MenuApp from "./MenuApp";
 
 class MenuButton extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class MenuButton extends Component {
     //this.closeMenu = this.closeMenu.bind(this);
   }
   handleMenuButtonClick() {
+    console.log("Been clicked");
     this.setState({ menuOpen: !this.state.menuOpen });
   }
   render() {
@@ -62,6 +64,7 @@ class MenuButton extends Component {
           <div style={styles.bar2} />
           <div style={styles.bar3} />
         </div>
+        <MenuApp menuOpen={this.state.menuOpen} />
       </div>
     );
   }
