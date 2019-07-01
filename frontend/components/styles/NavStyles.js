@@ -4,6 +4,7 @@ const NavStyles = styled.ul`
   margin: auto;
   padding: auto;
   display: flex;
+  border: 1px solid red;
   justify-self: end;
   font-size: 2rem;
   a,
@@ -58,11 +59,20 @@ const NavStyles = styled.ul`
     }
   }
   @media (max-width: 1300px) {
-    border-top: 1px solid ${props => props.theme.lightgrey};
+    /*border-top: 1px solid ${props => props.theme.lightgrey};*/
     width: 100%;
     justify-content: center;
     font-size: 1.5rem;
   }
+  @media (max-width: 1135px) {
+    font-size: 1.4rem;
+    }
+  @media (max-width: 1035px) {
+    font-size: 1.3rem;
+    }
+  @media (max-width: 700px) {
+    font-size: 12px;
+    }
 `;
 
 export default NavStyles;

@@ -212,7 +212,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/index.js");
 /* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_transition_group__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/home/ahebwa49/projects/sick-fits/frontend/components/CartCount.js";
+var _jsxFileName = "/home/ahebwa49/projects/e-commerce/frontend/components/CartCount.js";
 
 
 
@@ -484,7 +484,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _Cart__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Cart */ "./components/Cart.js");
 /* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Search */ "./components/Search.js");
-var _jsxFileName = "/home/ahebwa49/projects/sick-fits/frontend/components/Header.js";
+/* harmony import */ var _MenuButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./MenuButton */ "./components/MenuButton.js");
+var _jsxFileName = "/home/ahebwa49/projects/e-commerce/frontend/components/Header.js";
+
 
 
 
@@ -505,19 +507,92 @@ next_router__WEBPACK_IMPORTED_MODULE_4___default.a.onRouteChangeComplete = funct
 next_router__WEBPACK_IMPORTED_MODULE_4___default.a.onRouteChangeError = function () {
   nprogress__WEBPACK_IMPORTED_MODULE_5___default.a.done();
 };
+/*class MenuButton extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuOpen: false
+    };
+    this.handleMenuButtonClick = this.handleMenuButtonClick.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
+  }
+  handleMenuButtonClick() {
+    this.setState({ menuOpen: !this.state.menuOpen }, () => {
+      document.addEventListener("click", this.closeMenu);
+    });
+  }
+  closeMenu() {
+    this.setState({ menuOpen: !this.state.menuOpen }, () => {
+      document.removeEventListener("click", this.closeMenu);
+    });
+  }
+  render() {
+    const styles = {
+      container: {
+        display: "relative",
+        cursor: "pointer",
+        top: "10px"
+      },
+      bar1: {
+        width: "35px",
+        height: "5px",
+        backgroundColor: "#333",
+        margin: "6px 0px",
+        transition: "0.25s",
+        transform: this.state.menuOpen ? "rotate(45deg)" : "none",
+        transformOrigin: "top left",
+        marginBottom: "5px"
+      },
+      bar2: {
+        width: "35px",
+        height: "5px",
+        backgroundColor: "#333",
+        margin: "6px 0px",
+        transition: "0.25s",
+        opacity: this.state.menuOpen ? 0 : 1,
+        transform: this.state.menuOpen ? "translateX(-16px)" : "none"
+      },
+      bar3: {
+        width: "35px",
+        height: "5px",
+        backgroundColor: "#333",
+        margin: "6px 0px",
+        transition: "0.25s",
+        transform: this.state.menuOpen
+          ? "translateX(-1px) rotate(-45deg)"
+          : "none",
+        transformOrigin: "top left",
+        marginTop: "5px"
+      }
+    };
+    return (
+      <div>
+        <div
+          style={styles.container}
+          onClick={this.handleMenuButtonClick}
+          id="menuButton"
+        >
+          <div style={styles.bar1} />
+          <div style={styles.bar2} />
+          <div style={styles.bar3} />
+        </div>
+      </div>
+    );
+  }
+}
+export { MenuButton };*/
+
 
 var StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].header.withConfig({
   displayName: "Header__StyledHeader",
   componentId: "sc-2cpreo-0"
-})([".bar{border-bottom:10px solid ", ";display:grid;grid-template-columns:auto 1fr;justify-content:space-between;align-items:stretch;@media (max-width:1300px){grid-template-columns:1fr;justify-content:center;}}.sub-bar{display:grid;grid-template-columns:1fr auto;border-bottom:1px solid ", ";}"], function (props) {
+})([".bar{border-bottom:10px solid ", ";display:grid;border:1px solid red;grid-template-areas:\"logo search nav\";justify-content:space-between;align-items:stretch;padding:0 7%;.menuButton{display:none;}.logo{display:grid;grid-area:logo;position:relative;justify-items:start;}.search{display:grid;grid-area:search;position:relative;justify-items:center;}.nav{display:grid;grid-area:nav;position:relative;justify-items:center;}@media (max-width:1200px){padding:0 5%;}@media (max-width:1150px){padding:0 3%;}@media (max-width:1000px){padding:0 2%;grid-template-areas:\"logo search menuButton\";justify-items:stretch;.nav{display:none;}.menuButton{display:grid;grid-area:menuButton;position:relative;justify-items:center;align-items:center;}.logo{display:grid;grid-area:logo;position:relative;justify-items:center;}.search{display:grid;grid-area:search;position:relative;justify-items:center;}}@media (max-width:800px){padding:0 2%;}@media (max-width:700px){padding:0 3%;grid-template-areas:\"logo menuButton\" \"search search\";.menuButton{display:grid;grid-area:menuButton;position:relative;justify-items:center;align-items:center;}.logo{display:grid;grid-area:logo;position:relative;justify-items:center;}.search{display:grid;grid-area:search;position:relative;justify-items:center;}justify-items:stretch;.sub-bar{display:grid;justify-self:stretch;justify-items:stretch;grid-column:1/3;grid-row:2/3;}}}.sub-bar{display:grid;position:relative;justify-items:stretch;align-items:center;border:1px solid blue;}"], function (props) {
   return props.theme.black;
-}, function (props) {
-  return props.theme.lightgrey;
 });
 var Logo = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].h1.withConfig({
   displayName: "Header__Logo",
   componentId: "sc-2cpreo-1"
-})(["font-size:4rem;margin-left:2rem;position:relative;z-index:2;transform:skew(-7deg);a{padding:0.5rem 1rem;background:", ";text-transform:uppercase;color:white;text-decoration:none;}@media (max-width:1300px){margin:0;text-align:center;}"], function (props) {
+})(["display:flex;justify-content:center;font-size:4rem;margin-left:2rem;position:relative;border:1px solid red;margin:15% 0;z-index:2;transform:skew(-7deg);a{padding:0.5rem 1rem;background:", ";text-transform:uppercase;color:white;text-decoration:none;}@media (max-width:1300px){margin:0;text-align:center;}@media (max-width:700px){font-size:2rem;margin:5% 0;}"], function (props) {
   return props.theme.red;
 });
 
@@ -525,70 +600,236 @@ var Header = function Header() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledHeader, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 234
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 235
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, {
+    className: "logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 236
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 237
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 238
     },
     __self: this
-  }, "Tunda"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Tunda"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "sub-bar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 241
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 242
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "menuButton",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 244
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MenuButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 245
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "nav",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 247
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 248
+    },
+    __self: this
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 251
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cart__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 252
     },
     __self: this
   })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+/***/ "./components/MenuButton.js":
+/*!**********************************!*\
+  !*** ./components/MenuButton.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/home/ahebwa49/projects/e-commerce/frontend/components/MenuButton.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+
+
+var MenuButton =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(MenuButton, _Component);
+
+  function MenuButton(props) {
+    var _this;
+
+    _classCallCheck(this, MenuButton);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(MenuButton).call(this, props));
+    _this.state = {
+      menuOpen: false
+    };
+    _this.handleMenuButtonClick = _this.handleMenuButtonClick.bind(_assertThisInitialized(_assertThisInitialized(_this))); //this.closeMenu = this.closeMenu.bind(this);
+
+    return _this;
+  }
+
+  _createClass(MenuButton, [{
+    key: "handleMenuButtonClick",
+    value: function handleMenuButtonClick() {
+      this.setState({
+        menuOpen: !this.state.menuOpen
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var styles = {
+        container: {
+          display: "relative",
+          cursor: "pointer",
+          top: "10px"
+        },
+        bar1: {
+          width: "35px",
+          height: "5px",
+          backgroundColor: "#333",
+          margin: "6px 0px",
+          transition: "0.25s",
+          transform: this.state.menuOpen ? "rotate(45deg)" : "none",
+          transformOrigin: "top left",
+          marginBottom: "5px"
+        },
+        bar2: {
+          width: "35px",
+          height: "5px",
+          backgroundColor: "#333",
+          margin: "6px 0px",
+          transition: "0.25s",
+          opacity: this.state.menuOpen ? 0 : 1,
+          transform: this.state.menuOpen ? "translateX(-16px)" : "none"
+        },
+        bar3: {
+          width: "35px",
+          height: "5px",
+          backgroundColor: "#333",
+          margin: "6px 0px",
+          transition: "0.25s",
+          transform: this.state.menuOpen ? "translateX(-1px) rotate(-45deg)" : "none",
+          transformOrigin: "top left",
+          marginTop: "5px"
+        }
+      };
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: styles.container,
+        onClick: this.handleMenuButtonClick,
+        id: "menuButton",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: styles.bar1,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: styles.bar2,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: styles.bar3,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        },
+        __self: this
+      })));
+    }
+  }]);
+
+  return MenuButton;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (MenuButton);
 
 /***/ }),
 
@@ -681,7 +922,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _Cart__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Cart */ "./components/Cart.js");
 /* harmony import */ var _CartCount__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./CartCount */ "./components/CartCount.js");
-var _jsxFileName = "/home/ahebwa49/projects/sick-fits/frontend/components/Nav.js";
+var _jsxFileName = "/home/ahebwa49/projects/e-commerce/frontend/components/Nav.js";
 
 
 
@@ -1113,7 +1354,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _styles_DropDown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./styles/DropDown */ "./components/styles/DropDown.js");
 
-var _jsxFileName = "/home/ahebwa49/projects/sick-fits/frontend/components/Search.js";
+var _jsxFileName = "/home/ahebwa49/projects/e-commerce/frontend/components/Search.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1363,7 +1604,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graphql-tag */ "./node_modules/graphql-tag/src/index.js");
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./User */ "./components/User.js");
-var _jsxFileName = "/home/ahebwa49/projects/sick-fits/frontend/components/Signout.js";
+var _jsxFileName = "/home/ahebwa49/projects/e-commerce/frontend/components/Signout.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1781,17 +2022,19 @@ var DropDownItem = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div
 })(["border-bottom:1px solid ", ";background:", ";padding:1rem;transition:all 0.2s;", ";display:flex;align-items:center;border-left:10px solid ", ";img{margin-right:10px;}"], function (props) {
   return props.theme.lightgrey;
 }, function (props) {
-  return props.highlighted ? '#f7f7f7' : 'white';
+  return props.highlighted ? "#f7f7f7" : "white";
 }, function (props) {
-  return props.highlighted ? 'padding-left: 2rem;' : null;
+  return props.highlighted ? "padding-left: 2rem;" : null;
 }, function (props) {
-  return props.highlighted ? props.theme.lightgrey : 'white';
+  return props.highlighted ? props.theme.lightgrey : "white";
 });
 var glow = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])(["from{box-shadow:0 0 0px yellow;}to{box-shadow:0 0 10px 1px yellow;}"]);
 var SearchStyles = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "DropDown__SearchStyles",
   componentId: "n5d97g-2"
-})(["position:relative;input{width:100%;padding:10px;border:0;font-size:2rem;&.loading{animation:", " 0.5s ease-in-out infinite alternate;}}"], glow);
+})(["display:flex;position:relative;border:1px solid red;justify-content:center;align-items:center;input{width:100%;padding:10px;border:1px solid ", ";font-size:2rem;&.loading{animation:", " 0.5s ease-in-out infinite alternate;}}"], function (props) {
+  return props.theme.lightgrey;
+}, glow);
 
 
 /***/ }),
@@ -1810,9 +2053,7 @@ __webpack_require__.r(__webpack_exports__);
 var NavStyles = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul.withConfig({
   displayName: "NavStyles",
   componentId: "sc-11c0d2g-0"
-})(["margin:auto;padding:auto;display:flex;justify-self:end;font-size:2rem;a,button{padding:1rem 2rem;display:flex;align-items:center;position:relative;text-transform:uppercase;font-weight:900;font-size:1em;background:none;border:0;cursor:pointer;@media (max-width:700px){padding:auto;margin:auto;width:100%;}&:before{content:\"\";width:2px;background:", ";height:100%;left:0;position:absolute;transform:skew(-20deg);top:0;bottom:0;}&:after{height:2px;background:red;content:\"\";width:0;position:absolute;transform:translateX(-50%);transition:width 0.4s;transition-timing-function:cubic-bezier(1,-0.65,0,2.31);left:50%;margin-top:2rem;}&:hover,&:focus{outline:none;&:after{width:calc(100% - 60px);}@media (max-width:700px){width:calc(100% - 10px);}}}@media (max-width:1300px){border-top:1px solid ", ";width:100%;justify-content:center;font-size:1.5rem;}"], function (props) {
-  return props.theme.lightgrey;
-}, function (props) {
+})(["margin:auto;padding:auto;display:flex;border:1px solid red;justify-self:end;font-size:2rem;a,button{padding:1rem 2rem;display:flex;align-items:center;position:relative;text-transform:uppercase;font-weight:900;font-size:1em;background:none;border:0;cursor:pointer;@media (max-width:700px){padding:auto;margin:auto;width:100%;}&:before{content:\"\";width:2px;background:", ";height:100%;left:0;position:absolute;transform:skew(-20deg);top:0;bottom:0;}&:after{height:2px;background:red;content:\"\";width:0;position:absolute;transform:translateX(-50%);transition:width 0.4s;transition-timing-function:cubic-bezier(1,-0.65,0,2.31);left:50%;margin-top:2rem;}&:hover,&:focus{outline:none;&:after{width:calc(100% - 60px);}@media (max-width:700px){width:calc(100% - 10px);}}}@media (max-width:1300px){width:100%;justify-content:center;font-size:1.5rem;}@media (max-width:1135px){font-size:1.4rem;}@media (max-width:1035px){font-size:1.3rem;}@media (max-width:700px){font-size:12px;}"], function (props) {
   return props.theme.lightgrey;
 });
 /* harmony default export */ __webpack_exports__["default"] = (NavStyles);
