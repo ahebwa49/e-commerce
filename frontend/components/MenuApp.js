@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Router from "next/router";
 import MenuItem from "./MenuItem";
 import Menu from "./Menu";
+import User from "./User";
 
 class MenuApp extends Component {
   constructor(props) {
@@ -23,11 +24,23 @@ class MenuApp extends Component {
         fontFamily: "Lobster"
       }
     };
-    const menu = [
+    const guestMenu = [
       { title: "Shop", link: "/" },
       { title: "Sign In", link: "/signin" }
     ];
-    const menuItems = menu.map((item, index) => {
+    const userMenu = [
+      { title: "Shop", link: "/" },
+      { title: "Sell", link: "/sell" },
+      { title: "Orders", link: "/orders" }
+    ];
+    const guestMenuItems = guestMenu.map((item, index) => {
+      return (
+        <MenuItem link={item.link} key={index}>
+          {item.title}
+        </MenuItem>
+      );
+    });
+    const userMenuItems = userMenu.map((item, index) => {
       return (
         <MenuItem link={item.link} key={index}>
           {item.title}
@@ -35,9 +48,17 @@ class MenuApp extends Component {
       );
     });
     return (
-      <div style={styles.container}>
-        <Menu menuOpen={this.props.menuOpen}>{menuItems}</Menu>
-      </div>
+      <User>
+        {({ data: { profile } }) => (
+          <div style={styles.container}>
+            {profile ? (
+              <Menu menuOpen={this.props.menuOpen}>{userMenuItems}</Menu>
+            ) : (
+              <Menu menuOpen={this.props.menuOpen}>{guestMenuItems}</Menu>
+            )}
+          </div>
+        )}
+      </User>
     );
   }
 }
