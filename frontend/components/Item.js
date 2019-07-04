@@ -26,7 +26,7 @@ class Item extends Component {
         </Title>
         <PriceTag>{formatMoney(item.price)}</PriceTag>
         <p>{item.description}</p>
-        <div className="buttonList">
+        {/** <div className="buttonList">
           <Link
             href={{
               pathname: "/update",
@@ -38,7 +38,7 @@ class Item extends Component {
 
           <AddToCart id={item.id} />
           <DeleteItem id={item.id}>Delete Item</DeleteItem>
-        </div>
+        </div>*/}
       </ItemStyles>
     );
   }
