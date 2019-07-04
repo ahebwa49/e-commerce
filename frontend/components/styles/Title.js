@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Title = styled.h3`
   margin: 0 1rem;
@@ -11,6 +11,9 @@ const Title = styled.h3`
     display: inline;
     line-height: 1.3;
     font-size: 4rem;
+    @media (max-width: 700px) {
+      font-size: 16px;
+    }
     text-align: center;
     color: white;
     padding: 0 1rem;

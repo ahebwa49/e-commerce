@@ -813,7 +813,7 @@ __webpack_require__.r(__webpack_exports__);
 var PriceTag = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].span.withConfig({
   displayName: "PriceTag",
   componentId: "nwbk6t-0"
-})(["background:", ";transform:rotate(3deg);color:white;font-weight:600;padding:5px;line-height:1;font-size:3rem;display:inline-block;position:absolute;top:-3px;right:-3px;"], function (props) {
+})(["background:", ";transform:rotate(3deg);color:white;font-weight:600;padding:5px;line-height:1;font-size:3rem;@media (max-width:700px){font-size:16px;}display:inline-block;position:absolute;top:-3px;right:-3px;"], function (props) {
   return props.theme.red;
 });
 /* harmony default export */ __webpack_exports__["default"] = (PriceTag);
@@ -834,7 +834,7 @@ __webpack_require__.r(__webpack_exports__);
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h3.withConfig({
   displayName: "Title",
   componentId: "sc-16nq74k-0"
-})(["margin:0 1rem;text-align:center;transform:skew(-5deg) rotate(-1deg);margin-top:-3rem;text-shadow:2px 2px 0 rgba(0,0,0,0.1);a{background:", ";display:inline;line-height:1.3;font-size:4rem;text-align:center;color:white;padding:0 1rem;}"], function (props) {
+})(["margin:0 1rem;text-align:center;transform:skew(-5deg) rotate(-1deg);margin-top:-3rem;text-shadow:2px 2px 0 rgba(0,0,0,0.1);a{background:", ";display:inline;line-height:1.3;font-size:4rem;@media (max-width:700px){font-size:16px;}text-align:center;color:white;padding:0 1rem;}"], function (props) {
   return props.theme.red;
 });
 /* harmony default export */ __webpack_exports__["default"] = (Title);

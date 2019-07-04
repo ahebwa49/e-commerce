@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const PriceTag = styled.span`
   background: ${props => props.theme.red};
@@ -8,6 +8,9 @@ const PriceTag = styled.span`
   padding: 5px;
   line-height: 1;
   font-size: 3rem;
+  @media (max-width: 700px) {
+    font-size: 16px;
+  }
   display: inline-block;
   position: absolute;
   top: -3px;
