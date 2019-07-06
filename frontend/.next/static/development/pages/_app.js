@@ -2576,7 +2576,7 @@ __webpack_require__.r(__webpack_exports__);
 // This is client side config only - don't put anything in here that shouldn't be public!
 var endpoint = "http://localhost:4000";
 var prodEndpoint = "https://stonfits-yoga-prod.herokuapp.com";
-var perPage = 4;
+var perPage = 6;
 
 /***/ }),
 
