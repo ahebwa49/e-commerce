@@ -93,14 +93,14 @@ const StyledHeader = styled.header`
         display: grid;
         grid-area:menuButton;
         position: relative;
-        justify-items: center;
+        justify-items: end;
         align-items: center;
       }
       .logo{
         display: grid;
         grid-area:logo;
         position: relative;
-        justify-items: center;
+        justify-items: start;
       }
       .search{
         display: grid;
@@ -153,6 +153,12 @@ const Logo = styled.h1`
   @media (max-width: 700px) {
     font-size: 2rem;
     margin: 5% 0;
+    justify-content: start;
+    transform: skew(-4deg);
+    a {
+      padding: 0.5rem 0;
+      justify-content: start;
+    }
   }
 `;
 const Header = () => (
