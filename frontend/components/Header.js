@@ -19,9 +19,9 @@ Router.onRouteChangeError = () => {
 };
 const StyledHeader = styled.header`
   .bar {
-    border-bottom: 10px solid ${props => props.theme.black};
+    /*border-bottom: 10px solid ${props => props.theme.black};*/
     display: grid;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     grid-template-areas: "logo search nav";
     justify-content: space-between;
     align-items: stretch;
@@ -128,7 +128,7 @@ const Logo = styled.h1`
   font-size: 4rem;
   margin-left: 2rem;
   position: relative;
-  border: 1px solid purple;
+  /*border: 1px solid purple;*/
   margin: 15% 0;
   z-index: 2;
   transform: skew(-7deg);

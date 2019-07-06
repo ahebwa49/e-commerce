@@ -35,7 +35,7 @@ const glow = keyframes`
 const SearchStyles = styled.div`
   display: grid;
   position: relative;
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   justify-items: stretch;
   align-items: center;
   border-radius: 3%;
@@ -45,6 +45,9 @@ const SearchStyles = styled.div`
     border: 1px solid ${props => props.theme.lightgrey};
     border-radius: 3%;
     font-size: 2rem;
+    @media (max-width: 700px) {
+      font-size: 1.5rem;
+    }
     &.loading {
       animation: ${glow} 0.5s ease-in-out infinite alternate;
     }
