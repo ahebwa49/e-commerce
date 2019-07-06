@@ -33,15 +33,17 @@ const glow = keyframes`
 `;
 
 const SearchStyles = styled.div`
-  display: flex;
+  display: grid;
   position: relative;
-  border: 1px solid red;
-  justify-content: center;
+  border: 1px solid green;
+  justify-items: stretch;
   align-items: center;
+  border-radius: 3%;
   input {
     width: 100%;
     padding: 10px;
     border: 1px solid ${props => props.theme.lightgrey};
+    border-radius: 3%;
     font-size: 2rem;
     &.loading {
       animation: ${glow} 0.5s ease-in-out infinite alternate;

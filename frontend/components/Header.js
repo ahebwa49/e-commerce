@@ -106,27 +106,20 @@ const StyledHeader = styled.header`
         display: grid;
         grid-area:search;
         position: relative;
-        justify-items: center;
-      }
-      justify-items: stretch;
-      .sub-bar{
-        display: grid;
-        justify-self: stretch;
         justify-items: stretch;
-        grid-column: 1/3;
-        grid-row: 2/3;
       }
+      
     }
   }
-.sub-bar {
+/*.sub-bar {
     display: grid;
     position: relative;
     justify-items: stretch;
     align-items: center;
-    border: 1px solid blue;
-    /*grid-template-columns: 1fr auto;*/
-    /*border-bottom: 1px solid ${props => props.theme.lightgrey};*/
-  }
+    
+    grid-template-columns: 1fr auto;
+    /*border-bottom: 1px solid ${props => props.theme.lightgrey};
+  }*/
 `;
 
 const Logo = styled.h1`
@@ -135,7 +128,7 @@ const Logo = styled.h1`
   font-size: 4rem;
   margin-left: 2rem;
   position: relative;
-  border: 1px solid red;
+  border: 1px solid purple;
   margin: 15% 0;
   z-index: 2;
   transform: skew(-7deg);
@@ -153,11 +146,10 @@ const Logo = styled.h1`
   @media (max-width: 700px) {
     font-size: 2rem;
     margin: 5% 0;
-    justify-content: start;
+    justify-content: flex-start;
     transform: skew(-4deg);
     a {
       padding: 0.5rem 0;
-      justify-content: start;
     }
   }
 `;
@@ -169,7 +161,7 @@ const Header = () => (
           <a>Tunda</a>
         </Link>
       </Logo>
-      <div className="sub-bar">
+      <div className="search">
         <Search />
       </div>
       <div className="menuButton">

@@ -511,13 +511,13 @@ next_router__WEBPACK_IMPORTED_MODULE_4___default.a.onRouteChangeError = function
 var StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].header.withConfig({
   displayName: "Header__StyledHeader",
   componentId: "sc-2cpreo-0"
-})([".bar{border-bottom:10px solid ", ";display:grid;border:1px solid red;grid-template-areas:\"logo search nav\";justify-content:space-between;align-items:stretch;padding:0 7%;.menuButton{display:none;}.logo{display:grid;grid-area:logo;position:relative;justify-items:start;}.search{display:grid;grid-area:search;position:relative;justify-items:center;}.nav{display:grid;grid-area:nav;position:relative;justify-items:center;}@media (max-width:1200px){padding:0 5%;}@media (max-width:1150px){padding:0 3%;}@media (max-width:1000px){padding:0 2%;grid-template-areas:\"logo search menuButton\";justify-items:stretch;.nav{display:none;}.menuButton{display:grid;grid-area:menuButton;position:relative;justify-items:center;align-items:center;}.logo{display:grid;grid-area:logo;position:relative;justify-items:center;}.search{display:grid;grid-area:search;position:relative;justify-items:center;}}@media (max-width:800px){padding:0 2%;}@media (max-width:700px){padding:0 3%;grid-template-areas:\"logo menuButton\" \"search search\";.menuButton{display:grid;grid-area:menuButton;position:relative;justify-items:end;align-items:center;}.logo{display:grid;grid-area:logo;position:relative;justify-items:start;}.search{display:grid;grid-area:search;position:relative;justify-items:center;}justify-items:stretch;.sub-bar{display:grid;justify-self:stretch;justify-items:stretch;grid-column:1/3;grid-row:2/3;}}}.sub-bar{display:grid;position:relative;justify-items:stretch;align-items:center;border:1px solid blue;}"], function (props) {
+})([".bar{border-bottom:10px solid ", ";display:grid;border:1px solid red;grid-template-areas:\"logo search nav\";justify-content:space-between;align-items:stretch;padding:0 7%;.menuButton{display:none;}.logo{display:grid;grid-area:logo;position:relative;justify-items:start;}.search{display:grid;grid-area:search;position:relative;justify-items:center;}.nav{display:grid;grid-area:nav;position:relative;justify-items:center;}@media (max-width:1200px){padding:0 5%;}@media (max-width:1150px){padding:0 3%;}@media (max-width:1000px){padding:0 2%;grid-template-areas:\"logo search menuButton\";justify-items:stretch;.nav{display:none;}.menuButton{display:grid;grid-area:menuButton;position:relative;justify-items:center;align-items:center;}.logo{display:grid;grid-area:logo;position:relative;justify-items:center;}.search{display:grid;grid-area:search;position:relative;justify-items:center;}}@media (max-width:800px){padding:0 2%;}@media (max-width:700px){padding:0 3%;grid-template-areas:\"logo menuButton\" \"search search\";.menuButton{display:grid;grid-area:menuButton;position:relative;justify-items:end;align-items:center;}.logo{display:grid;grid-area:logo;position:relative;justify-items:start;}.search{display:grid;grid-area:search;position:relative;justify-items:stretch;}}}"], function (props) {
   return props.theme.black;
 });
 var Logo = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].h1.withConfig({
   displayName: "Header__Logo",
   componentId: "sc-2cpreo-1"
-})(["display:flex;justify-content:center;font-size:4rem;margin-left:2rem;position:relative;border:1px solid red;margin:15% 0;z-index:2;transform:skew(-7deg);a{padding:0.5rem 1rem;background:", ";text-transform:uppercase;color:white;text-decoration:none;}@media (max-width:1300px){margin:0;text-align:center;}@media (max-width:700px){font-size:2rem;margin:5% 0;justify-content:start;transform:skew(-4deg);a{padding:0.5rem 0;justify-content:start;}}"], function (props) {
+})(["display:flex;justify-content:center;font-size:4rem;margin-left:2rem;position:relative;border:1px solid purple;margin:15% 0;z-index:2;transform:skew(-7deg);a{padding:0.5rem 1rem;background:", ";text-transform:uppercase;color:white;text-decoration:none;}@media (max-width:1300px){margin:0;text-align:center;}@media (max-width:700px){font-size:2rem;margin:5% 0;justify-content:flex-start;transform:skew(-4deg);a{padding:0.5rem 0;}}"], function (props) {
   return props.theme.red;
 });
 
@@ -525,85 +525,85 @@ var Header = function Header() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledHeader, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 157
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 158
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, {
     className: "logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 159
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 160
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 161
     },
     __self: this
   }, "Tunda"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "sub-bar",
+    className: "search",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 164
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 165
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "menuButton",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 167
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MenuButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 168
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "nav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 170
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 179
+      lineNumber: 171
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
+      lineNumber: 174
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cart__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 175
     },
     __self: this
   })));
@@ -2493,7 +2493,7 @@ var glow = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])([
 var SearchStyles = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "DropDown__SearchStyles",
   componentId: "n5d97g-2"
-})(["display:flex;position:relative;border:1px solid red;justify-content:center;align-items:center;input{width:100%;padding:10px;border:1px solid ", ";font-size:2rem;&.loading{animation:", " 0.5s ease-in-out infinite alternate;}}"], function (props) {
+})(["display:grid;position:relative;border:1px solid green;justify-items:stretch;align-items:center;border-radius:3%;input{width:100%;padding:10px;border:1px solid ", ";border-radius:3%;font-size:2rem;&.loading{animation:", " 0.5s ease-in-out infinite alternate;}}"], function (props) {
   return props.theme.lightgrey;
 }, glow);
 
