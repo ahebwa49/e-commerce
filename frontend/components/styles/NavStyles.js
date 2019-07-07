@@ -4,7 +4,7 @@ const NavStyles = styled.ul`
   margin: auto;
   padding: auto;
   display: flex;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   justify-self: end;
   font-size: 2rem;
   a,

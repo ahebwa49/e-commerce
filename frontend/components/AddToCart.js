@@ -24,9 +24,9 @@ class AddToCart extends Component {
         }}
       >
         {(addToCart, { error, loading }) => (
-          <button disabled={loading} onClick={addToCart}>
+          <div disabled={loading} onClick={addToCart}>
             Add{loading && "ing"} to Cart
-          </button>
+          </div>
         )}
       </Mutation>
     );
