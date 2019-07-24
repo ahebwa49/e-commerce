@@ -4,6 +4,7 @@ import gql from "graphql-tag";
 import styled from "styled-components";
 import Item from "./Item";
 import Pagination from "./Pagination";
+import LoadingSpinner from "./LoadingSpinner";
 import { perPage } from "../config";
 
 const ALL_ITEMS_QUERY = gql`
@@ -50,7 +51,7 @@ class Items extends Component {
         >
           {({ data, error, loading }) => {
             console.log(data);
-            if (loading) return <p>Loading...</p>;
+            if (loading) return <LoadingSpinner />;
             if (error) return <p>Error: {Error.message}</p>;
 
             return (
@@ -62,6 +63,7 @@ class Items extends Component {
             );
           }}
         </Query>
+        <br />
         <br />
         <Pagination page={this.props.page} />
       </Center>

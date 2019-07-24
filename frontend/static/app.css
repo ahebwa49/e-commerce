@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 600px;
+  background: #2184e0;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5), 1px 2px 3px rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+.container .text {
+  background: #fff;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-family: sans-serif;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: 800;
+  position: relative;
+}
+.container .text::after {
+  content: "Follow Me";
+  position: absolute;
+  height: 100%;
+  width: 15%;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: normal;
+  font-weight: 100;
+  color: #fff;
+  text-transform: none;
+  font-size: 0.8rem;
+  background: #222;
+  transform-origin: bottom left;
+  transition: all 200ms ease-in;
+}
+.container .text:hover::after {
+  background: #e02121;
+}
+.container--box {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.container--box .box {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+}
+.container--box .box .spinner {
+  height: 40px;
+  width: 40px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.spinner {
+  color: red;
+  border: 4px solid red;
+  border-top-color: #ff790e;
+  border-right-color: #09a7a1;
+  border-bottom-color: #ff790e;
+  border-left-color: #09a7a1;
+  border-radius: 50%;
+  /*margin: -10px 10px 0 -10px;*/
+  height: 3em;
+  width: 3em;
+  position: relative;
+  display: inline-block;
+  -webkit-animation: spinner-animation 800ms infinite linear;
+  -moz-animation: spinner-animation 800ms infinite linear;
+  animation: spinner-animation 800ms infinite linear;
+}
+
+@-webkit-keyframes spinner-animation {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner-animation {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes spinner-animation {
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -3,6 +3,7 @@ import PaginationStyles from "./styles/PaginationStyles";
 import gql from "graphql-tag";
 import Head from "next/head";
 import Link from "next/link";
+import LoadingSpinner from "./LoadingSpinner";
 
 import { Query } from "react-apollo";
 import { perPage } from "../config";
@@ -20,7 +21,7 @@ const PAGINATION_QUERY = gql`
 const Pagination = props => (
   <Query query={PAGINATION_QUERY}>
     {({ data, loading, error }) => {
-      if (loading) return <p>loading...</p>;
+      if (loading) return <LoadingSpinner />;
       const count = data.itemsConnection.aggregate.count;
       const pages = Math.ceil(count / perPage);
       const page = props.page;
