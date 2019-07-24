@@ -525,12 +525,6 @@ function (_Component) {
           lineNumber: 66
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 67
-        },
-        __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pagination__WEBPACK_IMPORTED_MODULE_5__["default"], {
         page: this.props.page,
         __source: {
@@ -565,11 +559,22 @@ var _jsxFileName = "/home/ahebwa49/projects/e-commerce/frontend/components/Loadi
 
 
 var LoadingSpinner = function LoadingSpinner() {
+  var styles = {
+    container: {
+      display: "grid",
+      justifyItems: "center",
+      justifySelf: "center",
+      alignItems: "center",
+      alignSelf: "center",
+      textAlign: "center"
+    }
+  };
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "spinner",
+    style: styles.container,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 14
     },
     __self: this
   });
