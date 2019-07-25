@@ -12,9 +12,9 @@ class MenuApp extends Component {
     const styles = {
       container: {
         display: this.props.menuOpen ? "flex" : "none",
-        position: "fixed",
-        top: "15%",
-        right: 0,
+        position: "absolute",
+        top: "9vh",
+        right: "3%",
         zIndex: "2",
         opacity: this.props.menuOpen ? 1 : 0,
         alignItems: "center",

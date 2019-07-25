@@ -4,16 +4,16 @@ import MenuApp from "./MenuApp";
 class MenuButton extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    /*this.state = {
       menuOpen: false
     };
     this.handleMenuButtonClick = this.handleMenuButtonClick.bind(this);
-    //this.closeMenu = this.closeMenu.bind(this);
+    //this.closeMenu = this.closeMenu.bind(this);*/
   }
-  handleMenuButtonClick() {
+  /*  handleMenuButtonClick() {
     console.log("Been clicked");
     this.setState({ menuOpen: !this.state.menuOpen });
-  }
+  }*/
   render() {
     const styles = {
       container: {
@@ -27,7 +27,7 @@ class MenuButton extends Component {
         backgroundColor: "#333",
         margin: "6px 0px",
         transition: "0.25s",
-        transform: this.state.menuOpen ? "rotate(45deg)" : "none",
+        transform: this.props.menuOpen ? "rotate(45deg)" : "none",
         transformOrigin: "top left",
         marginBottom: "5px"
       },
@@ -37,8 +37,8 @@ class MenuButton extends Component {
         backgroundColor: "#333",
         margin: "6px 0px",
         transition: "0.25s",
-        opacity: this.state.menuOpen ? 0 : 1,
-        transform: this.state.menuOpen ? "translateX(-16px)" : "none"
+        opacity: this.props.menuOpen ? 0 : 1,
+        transform: this.props.menuOpen ? "translateX(-16px)" : "none"
       },
       bar3: {
         width: "35px",
@@ -46,7 +46,7 @@ class MenuButton extends Component {
         backgroundColor: "#333",
         margin: "6px 0px",
         transition: "0.25s",
-        transform: this.state.menuOpen
+        transform: this.props.menuOpen
           ? "translateX(-1px) rotate(-45deg)"
           : "none",
         transformOrigin: "top left",
@@ -57,14 +57,14 @@ class MenuButton extends Component {
       <div>
         <div
           style={styles.container}
-          onClick={this.handleMenuButtonClick}
+          onClick={this.props.handleMenuButtonClick}
           id="menuButton"
         >
           <div style={styles.bar1} />
           <div style={styles.bar2} />
           <div style={styles.bar3} />
         </div>
-        <MenuApp menuOpen={this.state.menuOpen} />
+        {/** <MenuApp menuOpen={this.state.menuOpen} />*/}
       </div>
     );
   }

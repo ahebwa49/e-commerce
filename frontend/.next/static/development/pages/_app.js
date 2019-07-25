@@ -519,7 +519,7 @@ var Logo = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].h1.withConf
   return props.theme.red;
 });
 
-var Header = function Header() {
+var Header = function Header(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledHeader, {
     __source: {
       fileName: _jsxFileName,
@@ -574,6 +574,8 @@ var Header = function Header() {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MenuButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    menuOpen: props.menuOpen,
+    handleMenuButtonClick: props.handleMenuButtonClick,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 168
@@ -583,25 +585,25 @@ var Header = function Header() {
     className: "nav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 173
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 174
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 177
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cart__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 178
     },
     __self: this
   })));
@@ -829,9 +831,9 @@ function (_Component) {
       var styles = {
         container: {
           display: this.props.menuOpen ? "flex" : "none",
-          position: "fixed",
-          top: "15%",
-          right: 0,
+          position: "absolute",
+          top: "9vh",
+          right: "3%",
           zIndex: "2",
           opacity: this.props.menuOpen ? 1 : 0,
           alignItems: "center",
@@ -945,13 +947,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 
 
@@ -962,28 +964,22 @@ function (_Component) {
   _inherits(MenuButton, _Component);
 
   function MenuButton(props) {
-    var _this;
-
     _classCallCheck(this, MenuButton);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(MenuButton).call(this, props));
-    _this.state = {
+    return _possibleConstructorReturn(this, _getPrototypeOf(MenuButton).call(this, props));
+    /*this.state = {
       menuOpen: false
     };
-    _this.handleMenuButtonClick = _this.handleMenuButtonClick.bind(_assertThisInitialized(_assertThisInitialized(_this))); //this.closeMenu = this.closeMenu.bind(this);
-
-    return _this;
+    this.handleMenuButtonClick = this.handleMenuButtonClick.bind(this);
+    //this.closeMenu = this.closeMenu.bind(this);*/
   }
+  /*  handleMenuButtonClick() {
+    console.log("Been clicked");
+    this.setState({ menuOpen: !this.state.menuOpen });
+  }*/
+
 
   _createClass(MenuButton, [{
-    key: "handleMenuButtonClick",
-    value: function handleMenuButtonClick() {
-      console.log("Been clicked");
-      this.setState({
-        menuOpen: !this.state.menuOpen
-      });
-    }
-  }, {
     key: "render",
     value: function render() {
       var styles = {
@@ -998,7 +994,7 @@ function (_Component) {
           backgroundColor: "#333",
           margin: "6px 0px",
           transition: "0.25s",
-          transform: this.state.menuOpen ? "rotate(45deg)" : "none",
+          transform: this.props.menuOpen ? "rotate(45deg)" : "none",
           transformOrigin: "top left",
           marginBottom: "5px"
         },
@@ -1008,8 +1004,8 @@ function (_Component) {
           backgroundColor: "#333",
           margin: "6px 0px",
           transition: "0.25s",
-          opacity: this.state.menuOpen ? 0 : 1,
-          transform: this.state.menuOpen ? "translateX(-16px)" : "none"
+          opacity: this.props.menuOpen ? 0 : 1,
+          transform: this.props.menuOpen ? "translateX(-16px)" : "none"
         },
         bar3: {
           width: "35px",
@@ -1017,7 +1013,7 @@ function (_Component) {
           backgroundColor: "#333",
           margin: "6px 0px",
           transition: "0.25s",
-          transform: this.state.menuOpen ? "translateX(-1px) rotate(-45deg)" : "none",
+          transform: this.props.menuOpen ? "translateX(-1px) rotate(-45deg)" : "none",
           transformOrigin: "top left",
           marginTop: "5px"
         }
@@ -1030,7 +1026,7 @@ function (_Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: styles.container,
-        onClick: this.handleMenuButtonClick,
+        onClick: this.props.handleMenuButtonClick,
         id: "menuButton",
         __source: {
           fileName: _jsxFileName,
@@ -1058,14 +1054,7 @@ function (_Component) {
           lineNumber: 65
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MenuApp__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        menuOpen: this.state.menuOpen,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 67
-        },
-        __self: this
-      }));
+      })));
     }
   }]);
 
@@ -1422,6 +1411,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
 /* harmony import */ var _Meta__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Meta */ "./components/Meta.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _MenuApp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MenuApp */ "./components/MenuApp.js");
 var _jsxFileName = "/home/ahebwa49/projects/e-commerce/frontend/components/Page.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -1434,16 +1424,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  @font-face {\n    font-family: 'radnika_next';\n    src: url('/static/radnikanext-medium-webfont.woff2') format('woff2');\n    font-weight: normal;\n    font-style: normal;\n  }\n  html {\n    box-sizing: border-box;\n    font-size: 10px;\n  }\n  *, *:before, *:after {\n    box-sizing: inherit;\n  }\n  body {\n    padding: 0;\n    margin: 0;\n    font-size: 1.5rem;\n    line-height: 2;\n    font-family: 'radnika_next';\n  }\n  a {\n    text-decoration: none;\n    color: ", ";\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  @font-face {\n    font-family: 'radnika_next';\n    src: url('/static/radnikanext-medium-webfont.woff2') format('woff2');\n    font-weight: normal;\n    font-style: normal;\n  }\n  html {\n    box-sizing: border-box;\n    font-size: 10px;\n  }\n  *, *:before, *:after {\n    box-sizing: inherit;\n  }\n  body {\n    padding: 0;\n    margin: 0;\n    font-size: 1.5rem;\n    line-height: 2;\n    font-family: 'radnika_next';\n    position: relative;\n  }\n  a {\n    text-decoration: none;\n    color: ", ";\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1453,6 +1443,7 @@ function _templateObject() {
 }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 
 
 
@@ -1486,44 +1477,69 @@ var Page =
 function (_Component) {
   _inherits(Page, _Component);
 
-  function Page() {
+  function Page(props) {
+    var _this;
+
     _classCallCheck(this, Page);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Page).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Page).call(this, props));
+    _this.state = {
+      menuOpen: false
+    };
+    _this.handleMenuButtonClick = _this.handleMenuButtonClick.bind(_assertThisInitialized(_assertThisInitialized(_this))); //this.closeMenu = this.closeMenu.bind(this);
+
+    return _this;
   }
 
   _createClass(Page, [{
+    key: "handleMenuButtonClick",
+    value: function handleMenuButtonClick() {
+      //console.log("Been clicked");
+      this.setState({
+        menuOpen: !this.state.menuOpen
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(styled_components__WEBPACK_IMPORTED_MODULE_3__["ThemeProvider"], {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 69
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledPage, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 70
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Meta__WEBPACK_IMPORTED_MODULE_2__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 71
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MenuApp__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        menuOpen: this.state.menuOpen,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 72
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        menuOpen: this.state.menuOpen,
+        handleMenuButtonClick: this.handleMenuButtonClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 73
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Inner, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 77
         },
         __self: this
       }, this.props.children)));

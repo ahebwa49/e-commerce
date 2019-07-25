@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Meta from "./Meta";
 import styled, { ThemeProvider, injectGlobal } from "styled-components";
+import MenuApp from "./MenuApp";
 
 const theme = {
   red: "#09A7A1",
@@ -42,6 +43,7 @@ injectGlobal`
     font-size: 1.5rem;
     line-height: 2;
     font-family: 'radnika_next';
+    position: relative;
   }
   a {
     text-decoration: none;
@@ -50,12 +52,28 @@ injectGlobal`
 `;
 
 class Page extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuOpen: false
+    };
+    this.handleMenuButtonClick = this.handleMenuButtonClick.bind(this);
+    //this.closeMenu = this.closeMenu.bind(this);
+  }
+  handleMenuButtonClick() {
+    //console.log("Been clicked");
+    this.setState({ menuOpen: !this.state.menuOpen });
+  }
   render() {
     return (
-      <ThemeProvider theme = {theme}>
+      <ThemeProvider theme={theme}>
         <StyledPage>
           <Meta />
-          <Header />
+          <MenuApp menuOpen={this.state.menuOpen} />
+          <Header
+            menuOpen={this.state.menuOpen}
+            handleMenuButtonClick={this.handleMenuButtonClick}
+          />
           <Inner>{this.props.children}</Inner>
         </StyledPage>
       </ThemeProvider>

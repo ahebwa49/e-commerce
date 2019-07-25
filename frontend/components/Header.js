@@ -153,7 +153,7 @@ const Logo = styled.h1`
     }
   }
 `;
-const Header = () => (
+const Header = props => (
   <StyledHeader>
     <div className="bar">
       <Logo className="logo">
@@ -165,7 +165,10 @@ const Header = () => (
         <Search />
       </div>
       <div className="menuButton">
-        <MenuButton />
+        <MenuButton
+          menuOpen={props.menuOpen}
+          handleMenuButtonClick={props.handleMenuButtonClick}
+        />
       </div>
       <div className="nav">
         <Nav />
