@@ -48,7 +48,7 @@ class Signin extends Component {
               }}
             >
               <fieldset disabled={loading} aria-busy={loading}>
-                <h2>Sign in to your account</h2>
+                <h2>Sign in</h2>
                 <Error error={error} />
                 <label htmlFor="email">
                   email
@@ -70,12 +70,14 @@ class Signin extends Component {
                     onChange={this.saveToState}
                   />
                 </label>
-                <button type="submit">Sign in!</button>
+                <button type="submit">Sign in</button>
                 <h3>
-                  Create an{" "}
+                  Create an account{" "}
                   <Link href="/signup">
-                    <a color="red" textDecoration="underline">
-                      account
+                    <a
+                      style={{ color: "#FF790E", textDecoration: "underline" }}
+                    >
+                      here
                     </a>
                   </Link>
                 </h3>

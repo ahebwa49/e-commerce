@@ -484,7 +484,7 @@ function (_Component) {
             lineNumber: 51
           },
           __self: this
-        }, "Sign in to your account"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ErrorMessage__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        }, "Sign in"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ErrorMessage__WEBPACK_IMPORTED_MODULE_7__["default"], {
           error: error,
           __source: {
             fileName: _jsxFileName,
@@ -534,13 +534,13 @@ function (_Component) {
             lineNumber: 73
           },
           __self: this
-        }, "Sign in!"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+        }, "Sign in"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 74
           },
           __self: this
-        }, "Create an", " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+        }, "Create an account", " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
           href: "/signup",
           __source: {
             fileName: _jsxFileName,
@@ -548,14 +548,16 @@ function (_Component) {
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-          color: "red",
-          textDecoration: "underline",
+          style: {
+            color: "#FF790E",
+            textDecoration: "underline"
+          },
           __source: {
             fileName: _jsxFileName,
             lineNumber: 77
           },
           __self: this
-        }, "account")))));
+        }, "here")))));
       });
     }
   }]);
@@ -746,7 +748,7 @@ function (_Component) {
             lineNumber: 54
           },
           __self: this
-        }, "Sign up here"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ErrorMessage__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        }, "Sign up"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ErrorMessage__WEBPACK_IMPORTED_MODULE_7__["default"], {
           error: error,
           __source: {
             fileName: _jsxFileName,
@@ -814,7 +816,7 @@ function (_Component) {
             lineNumber: 86
           },
           __self: this
-        }, "Sign Up!"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+        }, "Sign Up"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 87
@@ -828,6 +830,10 @@ function (_Component) {
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+          style: {
+            color: "#FF790E",
+            textDecoration: "underline"
+          },
           __source: {
             fileName: _jsxFileName,
             lineNumber: 90
@@ -921,7 +927,7 @@ var loading = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"]
 var Form = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].form.withConfig({
   displayName: "Form",
   componentId: "sc-1xszr8q-0"
-})(["box-shadow:0 0 5px 3px rgba(0,0,0,0.05);background:rgba(0,0,0,0.02);border:5px solid white;padding:20px;font-size:1.5rem;line-height:1.5;font-weight:600;label{display:block;margin-bottom:1rem;}input,textarea,select{width:100%;padding:0.5rem;font-size:1rem;border:1px solid black;&:focus{outline:0;border-color:", ";}}button,input[type='submit']{width:auto;background:red;color:white;border:0;font-size:2rem;font-weight:600;padding:0.5rem 1.2rem;}fieldset{border:0;padding:0;&[disabled]{opacity:0.5;}&::before{height:10px;content:'';display:block;background-image:linear-gradient(to right,#ff3019 0%,#e2b04a 50%,#ff3019 100%);}&[aria-busy='true']::before{background-size:50% auto;animation:", " 0.5s linear infinite;}}"], function (props) {
+})(["box-shadow:0 0 5px 3px rgba(0,0,0,0.05);background:rgba(0,0,0,0.02);border:5px solid white;padding:20px;font-size:1.5rem;line-height:1.5;font-weight:600;label{display:block;margin-bottom:1rem;}input,textarea,select{width:100%;padding:0.5rem;font-size:1rem;border:1px solid black;&:focus{outline:0;border-color:", ";}}button,input[type=\"submit\"]{width:auto;background:#FF790E;color:white;border:0;font-size:2rem;font-weight:600;padding:0.5rem 1.2rem;}fieldset{border:0;padding:0;&[disabled]{opacity:0.5;}&::before{height:10px;content:\"\";display:block;background-image:linear-gradient( to right,#09a7a1 0%,#FF790E 50%,#09a7a1 100% );}&[aria-busy=\"true\"]::before{background-size:50% auto;animation:", " 0.5s linear infinite;}}"], function (props) {
   return props.theme.red;
 }, loading);
 /* harmony default export */ __webpack_exports__["default"] = (Form);
@@ -29565,7 +29571,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!*******************************!*\
   !*** multi ./pages/signin.js ***!
   \*******************************/
@@ -29590,5 +29596,5 @@ module.exports = dll_5d62d38be3592dca3a42;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]));;
+},[[3,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=signin.js.map

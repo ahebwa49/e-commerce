@@ -51,7 +51,7 @@ class Signup extends Component {
               }}
             >
               <fieldset disabled={loading} aria-busy={loading}>
-                <h2>Sign up here</h2>
+                <h2>Sign up</h2>
                 <Error error={error} />
                 <label htmlFor="name">
                   name
@@ -83,13 +83,15 @@ class Signup extends Component {
                     onChange={this.saveToState}
                   />
                 </label>
-                <button type="submit">Sign Up!</button>
-                <h2>
+                <button type="submit">Sign Up</button>
+                <h3>
                   Have an account already? login{" "}
                   <Link href="/signin">
-                    <a>here</a>
+                    <a style={{ color: "#FF790E", textDecoration: "underline" }}>
+                      here
+                    </a>
                   </Link>
-                </h2>
+                </h3>
               </fieldset>
             </Form>
           );
