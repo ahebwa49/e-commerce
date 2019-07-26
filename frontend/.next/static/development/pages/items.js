@@ -857,9 +857,7 @@ __webpack_require__.r(__webpack_exports__);
 var PriceTag = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].span.withConfig({
   displayName: "PriceTag",
   componentId: "nwbk6t-0"
-})(["background:", ";transform:rotate(3deg);color:white;font-weight:600;padding:5px;line-height:1;font-size:3rem;@media (max-width:700px){font-size:16px;}display:inline-block;position:absolute;top:-3px;right:-3px;"], function (props) {
-  return props.theme.red;
-});
+})(["background:#FF790E;transform:rotate(3deg);color:white;font-weight:600;padding:5px;line-height:1;font-size:3rem;@media (max-width:700px){font-size:16px;}display:inline-block;position:absolute;top:-3px;right:-3px;"]);
 /* harmony default export */ __webpack_exports__["default"] = (PriceTag);
 
 /***/ }),
@@ -30047,7 +30045,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/items.js ***!
   \******************************/
@@ -30072,5 +30070,5 @@ module.exports = dll_5d62d38be3592dca3a42;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]));;
+},[[4,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=items.js.map

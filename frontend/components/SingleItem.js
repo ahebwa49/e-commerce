@@ -7,6 +7,7 @@ import Head from "next/head";
 import Link from "next/link";
 import DeleteItem from "./DeleteItem";
 import AddToCart from "./AddToCart";
+import LoadingSpinner from "./LoadingSpinner";
 
 const SingleItemStyles = styled.div`
   max-width: 1200px;
@@ -35,7 +36,7 @@ const SingleItemStyles = styled.div`
     align-self: start;
     align-items: center;
     margin: 3rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     /*border: 1px solid red;*/
   }
   .description {
@@ -43,7 +44,7 @@ const SingleItemStyles = styled.div`
     justify-items: center;
     align-self: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     /*border: 1px solid purple;*/
   }
   .addtocart {
@@ -52,10 +53,12 @@ const SingleItemStyles = styled.div`
     justify-items: center;
     align-self: center;
     align-items: center;
-    font-size: 2rem;
-    border: 1px solid green;
-    background-color: #09a7a1;
-    color: white;
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
+    border: 1px solid #09a7a1;
+    background: ${props => props.theme.lightgrey};
+    color: black;
   }
   .modify {
     cursor: pointer;
@@ -63,19 +66,21 @@ const SingleItemStyles = styled.div`
     justify-items: center;
     align-self: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     /*border: 1px solid blue;*/
   }
   .edit {
     cursor: pointer;
     display: grid;
-    justify-items: stretch;
+    justify-items: center;
     align-self: center;
     align-items: center;
-    font-size: 2rem;
-    /*border: 1px solid orange;*/
-    background-color: #ff790e;
-    color: white;
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
+    border: 1px solid #09a7a1;
+    background: ${props => props.theme.lightgrey};
+    color: black;
   }
   .delete {
     cursor: pointer;
@@ -83,10 +88,12 @@ const SingleItemStyles = styled.div`
     justify-items: center;
     align-self: center;
     align-items: center;
-    font-size: 2rem;
-    /*border: 1px solid red;*/
-    background-color: red;
-    color: white;
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
+    border: 1px solid #09a7a1;
+    background: ${props => props.theme.lightgrey};
+    color: black;
   }
 `;
 
@@ -109,7 +116,7 @@ class SingleItem extends Component {
         {({ data, loading, error }) => {
           console.log(data);
           if (error) return <Error error={error} />;
-          if (loading) return <p>loading...</p>;
+          if (loading) return <LoadingSpinner />;
           if (!data.item) return <p>No data found for {this.props.id}</p>;
 
           return (
@@ -121,7 +128,9 @@ class SingleItem extends Component {
               <img src={data.item.largeImage} alt={data.item.title} />
               <div className="details">
                 <div className="description">
-                  <h2>{data.item.title}</h2>
+                  <h2 style={{ textDecoration: "underline" }}>
+                    {data.item.title}
+                  </h2>
                   <p>{data.item.description}</p>
                 </div>
                 <br />
@@ -129,21 +138,20 @@ class SingleItem extends Component {
                   <AddToCart id={data.item.id} />
                 </div>
                 <br />
-                <div className="modify">
-                  <div className="edit">
-                    <Link
-                      href={{
-                        pathname: "/update",
-                        query: { id: data.item.id }
-                      }}
-                    >
-                      <a>Edit</a>
-                    </Link>
-                  </div>
-                  <br />
-                  <div className="delete">
-                    <DeleteItem id={data.item.id}>Delete</DeleteItem>
-                  </div>
+
+                <div className="edit">
+                  <Link
+                    href={{
+                      pathname: "/update",
+                      query: { id: data.item.id }
+                    }}
+                  >
+                    <a style={{ color: "black" }}>Edit</a>
+                  </Link>
+                </div>
+                <br />
+                <div className="delete">
+                  <DeleteItem id={data.item.id}>Delete</DeleteItem>
                 </div>
               </div>
             </SingleItemStyles>
