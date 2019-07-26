@@ -33,8 +33,8 @@ const Dot = styled.div`
   border-radius: 50%;
   padding: 0.5rem;
   line-height: 2rem;
-  min-width: 3rem;
-  margin-left: 1rem;
+  min-width: 2rem;
+  margin-left: 0.5rem;
   font-weight: 100;
   font-feature-settings: "tnum";
   font-variant-numeric: tabular-nums;

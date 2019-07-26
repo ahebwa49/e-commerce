@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const CartStyles = styled.div`
   padding: 20px;
@@ -8,8 +8,8 @@ const CartStyles = styled.div`
   height: 100%;
   top: 0;
   right: 0;
-  width: 40%;
-  min-width: 500px;
+  width: 40vw;
+  min-width: 300px;
   bottom: 0;
   transform: translateX(100%);
   transition: all 0.3s;
@@ -41,6 +41,24 @@ const CartStyles = styled.div`
     padding: 0;
     list-style: none;
     overflow: scroll;
+  }
+  @media (max-width: 700px) {
+    font-size: 16px;
+    width: 90%;
+    height: 70%;
+    padding: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    footer {
+      border-top: 3px double ${props => props.theme.black};
+      margin-top: 5px;
+      padding-top: 5px;
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 600;
+    }
   }
 `;
 

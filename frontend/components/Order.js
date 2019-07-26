@@ -7,6 +7,7 @@ import gql from "graphql-tag";
 import formatMoney from "../lib/formatMoney";
 import Error from "./ErrorMessage";
 import OrderStyles from "./styles/OrderStyles";
+import LoadingSpinner from "./LoadingSpinner";
 
 const SINGLE_ORDER_QUERY = gql`
   query SINGLE_ORDER_QUERY($id: ID!) {
@@ -39,13 +40,13 @@ class Order extends Component {
       <Query query={SINGLE_ORDER_QUERY} variables={{ id: this.props.id }}>
         {({ data, error, loading }) => {
           console.log(data);
-          if (loading) return <p>loading...</p>;
+          if (loading) return <LoadingSpinner />;
           if (error) return <Error error={error} />;
           const order = data.order;
           return (
             <OrderStyles>
               <Head>
-                <title>Sick-Fits - Order {order.id}</title>
+                <title>Tunda - Order {order.id}</title>
               </Head>
               <p>
                 <span>Order id is</span>

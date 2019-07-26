@@ -224,7 +224,7 @@ var AnimationStyles = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].
 var Dot = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
   displayName: "CartCount__Dot",
   componentId: "xxvp4g-1"
-})(["background:", ";color:white;border-radius:50%;padding:0.5rem;line-height:2rem;min-width:3rem;margin-left:1rem;font-weight:100;font-feature-settings:\"tnum\";font-variant-numeric:tabular-nums;"], function (props) {
+})(["background:", ";color:white;border-radius:50%;padding:0.5rem;line-height:2rem;min-width:2rem;margin-left:0.5rem;font-weight:100;font-feature-settings:\"tnum\";font-variant-numeric:tabular-nums;"], function (props) {
   return props.theme.red;
 });
 
@@ -2199,7 +2199,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ErrorMessage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ErrorMessage */ "./components/ErrorMessage.js");
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./User */ "./components/User.js");
 
-var _jsxFileName = "/home/ahebwa49/projects/sick-fits/frontend/components/TakeMyMoney.js";
+var _jsxFileName = "/home/ahebwa49/projects/e-commerce/frontend/components/TakeMyMoney.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -2348,7 +2348,7 @@ function (_Component) {
         }, function (createOrder) {
           return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_stripe_checkout__WEBPACK_IMPORTED_MODULE_2___default.a, {
             amount: Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_8__["default"])(profile.cart),
-            name: "Sick Fits",
+            name: "Tunda",
             description: "order of ".concat(totalItems(profile.cart), " items"),
             image: profile.cart.length && profile.cart[0].item && profile.cart[0].item.image,
             stripeKey: "pk_test_cB5I6YYzJoKoiBaTGvghAkAc003RAVKrzV",
@@ -2450,8 +2450,10 @@ __webpack_require__.r(__webpack_exports__);
 var CartStyles = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "CartStyles",
   componentId: "sc-1tvog53-0"
-})(["padding:20px;position:relative;background:white;position:fixed;height:100%;top:0;right:0;width:40%;min-width:500px;bottom:0;transform:translateX(100%);transition:all 0.3s;box-shadow:0 0 10px 3px rgba(0,0,0,0.2);z-index:5;display:grid;grid-template-rows:auto 1fr auto;", ";header{border-bottom:5px solid ", ";margin-bottom:2rem;padding-bottom:2rem;}footer{border-top:10px double ", ";margin-top:2rem;padding-top:2rem;display:grid;grid-template-columns:auto auto;align-items:center;font-size:3rem;font-weight:900;p{margin:0;}}ul{margin:0;padding:0;list-style:none;overflow:scroll;}"], function (props) {
+})(["padding:20px;position:relative;background:white;position:fixed;height:100%;top:0;right:0;width:40vw;min-width:300px;bottom:0;transform:translateX(100%);transition:all 0.3s;box-shadow:0 0 10px 3px rgba(0,0,0,0.2);z-index:5;display:grid;grid-template-rows:auto 1fr auto;", ";header{border-bottom:5px solid ", ";margin-bottom:2rem;padding-bottom:2rem;}footer{border-top:10px double ", ";margin-top:2rem;padding-top:2rem;display:grid;grid-template-columns:auto auto;align-items:center;font-size:3rem;font-weight:900;p{margin:0;}}ul{margin:0;padding:0;list-style:none;overflow:scroll;}@media (max-width:700px){font-size:16px;width:90%;height:70%;padding:5px;margin-bottom:5px;padding-bottom:5px;footer{border-top:3px double ", ";margin-top:5px;padding-top:5px;display:grid;grid-template-columns:auto auto;align-items:center;font-size:16px;font-weight:600;}}"], function (props) {
   return props.open && "transform: translateX(0);";
+}, function (props) {
+  return props.theme.black;
 }, function (props) {
   return props.theme.black;
 }, function (props) {
@@ -2558,7 +2560,7 @@ __webpack_require__.r(__webpack_exports__);
 var SickButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].button.withConfig({
   displayName: "SickButton",
   componentId: "l04z44-0"
-})(["background:red;color:white;font-weight:500;border:0;border-radius:0;text-transform:uppercase;font-size:2rem;padding:0.8rem 1.5rem;transform:skew(-2deg);display:inline-block;transition:all 0.5s;&[disabled]{opacity:0.5;}"]);
+})(["background:#FF790E;color:white;font-weight:500;border:0;border-radius:0;text-transform:uppercase;font-size:2rem;padding:0.8rem 1.5rem;transform:skew(-2deg);display:inline-block;transition:all 0.5s;&[disabled]{opacity:0.5;}"]);
 /* harmony default export */ __webpack_exports__["default"] = (SickButton);
 
 /***/ }),
@@ -2577,7 +2579,7 @@ __webpack_require__.r(__webpack_exports__);
 var Supreme = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h3.withConfig({
   displayName: "Supreme",
   componentId: "xv30qb-0"
-})(["background:", ";color:white;display:inline-block;padding:4px 5px;transform:skew(-3deg);margin:0;font-size:4rem;"], function (props) {
+})(["background:", ";color:white;display:inline-block;padding:4px 5px;transform:skew(-3deg);margin:0;font-size:4rem;@media (max-width:700px){font-size:2rem;}"], function (props) {
   return props.theme.red;
 });
 /* harmony default export */ __webpack_exports__["default"] = (Supreme);

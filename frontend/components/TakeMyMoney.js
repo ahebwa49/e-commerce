@@ -56,7 +56,7 @@ class TakeMyMoney extends Component {
             {createOrder => (
               <StripeCheckout
                 amount={calcTotalPrice(profile.cart)}
-                name="Sick Fits"
+                name="Tunda"
                 description={`order of ${totalItems(profile.cart)} items`}
                 image={
                   profile.cart.length &&
