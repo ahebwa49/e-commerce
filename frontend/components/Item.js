@@ -19,9 +19,11 @@ class Item extends Component {
             query: { id: item.id }
           }}
         >
-          <a style={{ textDecoration: "none", cursor: "pointers" }}>
+          <a>
             {item.image && <img src={item.image} alt={item.title} />}
-            <Title>{item.title}</Title>
+            <Title>
+              <a>{item.title}</a>
+            </Title>
             <PriceTag>{formatMoney(item.price)}</PriceTag>
           </a>
         </Link>
