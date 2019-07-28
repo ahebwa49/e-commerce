@@ -13,18 +13,18 @@ class Item extends Component {
     const { item } = this.props;
     return (
       <ItemStyles>
-        {item.image && <img src={item.image} alt={item.title} />}
-        <Title>
-          <Link
-            href={{
-              pathname: "/item",
-              query: { id: item.id }
-            }}
-          >
-            <a>{item.title}</a>
-          </Link>
-        </Title>
-        <PriceTag>{formatMoney(item.price)}</PriceTag>
+        <Link
+          href={{
+            pathname: "/item",
+            query: { id: item.id }
+          }}
+        >
+          <a style={{ textDecoration: "none", cursor: "pointers" }}>
+            {item.image && <img src={item.image} alt={item.title} />}
+            <Title>{item.title}</Title>
+            <PriceTag>{formatMoney(item.price)}</PriceTag>
+          </a>
+        </Link>
         {/*<p>{item.description}</p>
         * <div className="buttonList">
           <Link
