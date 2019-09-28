@@ -128,3 +128,7 @@ Next you need to run the frontend. Make sure to install dependencies
 cd frontend
 npm install
 ```
+
+`npm test` to run the tests
+
+`npm run dev` to start the frontend in development mode
