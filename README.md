@@ -10,8 +10,6 @@ First things first, clone this repo
 git clone https://github.com/ahebwa49/e-commerce.git
 ```
 
-NB: Make sure you have installed Docker and Docker Compose if you want to run prisma server on localhost
-
 # Backend
 
 ## Backend Architecture
@@ -38,6 +36,8 @@ Here’s an overview of the architecture that’s used when building [GraphQL](h
 - High performance **query engine** that runs on the Prisma server and generates actual database queries.
 - **Prisma client** that connects to the prisma server.
 - **Realtime event system** that lets you subscribe to database events.
+
+NB: To use Prisma locally, you need to have Docker installed on your machine. If you don't have Docker yet, you can download the Docker Community Edition for your operating system [here](https://www.docker.com/community-edition).
 
 #### GraphQL
 
@@ -102,7 +102,6 @@ To see the tables in the current schema, run `\dt`.
 
 Run `SELECT * FROM "Event"` to return the data in the table model. Make sure you escape the table name because postgres will by default make all the characters lower case hence throw an error to you that the table "event" doesn't exist in the database.
 
-
 ## Next you need to run the backend. Make sure to install dependencies
 
 ```sh
@@ -113,7 +112,6 @@ npm install
 Now you can start the app in development mode. I already deployed prisma to heroku so you don't need to run prisma server on your local machine.
 
 `npm run dev`
-
 
 If everything goes well, you can navigate to `http://localhost:4000` in the browser to make some queries and mutations using the GraphQL playground.
 
