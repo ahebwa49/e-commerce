@@ -10,7 +10,7 @@ First things first, clone this repo
 git clone https://github.com/ahebwa49/e-commerce.git
 ```
 
-Make sure you have installed Docker and Docker Compose
+NB: Make sure you have installed Docker and Docker Compose if you want to run prisma server on localhost
 
 # Backend
 
@@ -110,13 +110,10 @@ cd backend
 npm install
 ```
 
-Now you can start the prisma, and the app in development mode
+Now you can start the app in development mode. I already deployed prisma to heroku so you don't need to run prisma server on your local machine.
 
-```sh
-docker-compose up -d
-npm run deploy
-npm run dev
-```
+`npm run dev`
+
 
 If everything goes well, you can navigate to `http://localhost:4000` in the browser to make some queries and mutations using the GraphQL playground.
 
@@ -132,3 +129,5 @@ npm install
 `npm test` to run the tests
 
 `npm run dev` to start the frontend in development mode
+
+You should be able to view items that are already in the database. Feel free to ask incase you are stuck somewhere.
