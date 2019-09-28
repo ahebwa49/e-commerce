@@ -2,57 +2,30 @@
 
 exports[`<Item /> renders and matches the snapshot 1`] = `
 <ItemStyles__Item>
-  <img
-    alt="A cool item"
-    src="dog.jpg"
-  />
-  <Title>
-    <Link
-      href={
-        Object {
-          "pathname": "/item",
-          "query": Object {
-            "id": "ABCD",
-          },
-        }
+  <Link
+    href={
+      Object {
+        "pathname": "/item",
+        "query": Object {
+          "id": "ABCD",
+        },
       }
-    >
-      <a>
-        A cool item
-      </a>
-    </Link>
-  </Title>
-  <PriceTag>
-    $40
-  </PriceTag>
-  <p>
-    This is really cool
-  </p>
-  <div
-    className="buttonList"
+    }
   >
-    <Link
-      href={
-        Object {
-          "pathname": "/update",
-          "query": Object {
-            "id": "ABCD",
-          },
-        }
-      }
-    >
-      <a>
-        Edit
-      </a>
-    </Link>
-    <AddToCart
-      id="ABCD"
-    />
-    <DeleteItem
-      id="ABCD"
-    >
-      Delete Item
-    </DeleteItem>
-  </div>
+    <a>
+      <img
+        alt="A cool item"
+        src="dog.jpg"
+      />
+      <Title>
+        <a>
+          A cool item
+        </a>
+      </Title>
+      <PriceTag>
+        $40
+      </PriceTag>
+    </a>
+  </Link>
 </ItemStyles__Item>
 `;

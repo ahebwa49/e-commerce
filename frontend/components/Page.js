@@ -58,12 +58,20 @@ class Page extends Component {
       menuOpen: false
     };
     this.handleMenuButtonClick = this.handleMenuButtonClick.bind(this);
-    //this.closeMenu = this.closeMenu.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
   }
   handleMenuButtonClick() {
-    //console.log("Been clicked");
-    this.setState({ menuOpen: !this.state.menuOpen });
+    this.setState({ menuOpen: !this.state.menuOpen }, async () => {
+      /*await document.addEventListener("click", this.closeMenu);*/
+      /*document.getElementById("menuButton").removeEventListener("click", "");*/
+    });
   }
+  closeMenu() {
+    this.setState({ menuOpen: !this.state.menuOpen }, async () => {
+      /*await document.removeEventListener("click", this.closeMenu);*/
+    });
+  }
+
   render() {
     return (
       <ThemeProvider theme={theme}>

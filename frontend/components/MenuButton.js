@@ -4,16 +4,7 @@ import MenuApp from "./MenuApp";
 class MenuButton extends Component {
   constructor(props) {
     super(props);
-    /*this.state = {
-      menuOpen: false
-    };
-    this.handleMenuButtonClick = this.handleMenuButtonClick.bind(this);
-    //this.closeMenu = this.closeMenu.bind(this);*/
   }
-  /*  handleMenuButtonClick() {
-    console.log("Been clicked");
-    this.setState({ menuOpen: !this.state.menuOpen });
-  }*/
   render() {
     const styles = {
       container: {
@@ -64,7 +55,6 @@ class MenuButton extends Component {
           <div style={styles.bar2} />
           <div style={styles.bar3} />
         </div>
-        {/** <MenuApp menuOpen={this.state.menuOpen} />*/}
       </div>
     );
   }
